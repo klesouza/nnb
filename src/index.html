@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+            #contextMenu{
+                position: fixed;
+                width: 100px;
+                height: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas style="display:none" id="canvas" width="800" height="600">
+        </canvas>
+        <svg id="svg" width="800" height="600"></svg>
+        <label>Number of units</label>
+        <input type="text" id="txtUnits">
+        <button class="btn" id="btnAddLayer" onclick="net.addLayer(document.getElementById('txtUnits').value)">Add Layer</button>
+        <div id="contextMenu" style="display:none;">
+            <button id="remove">remove</button>
+            <button id="addPositive">add + connections</button>            
+            <button id="addNegative">add - connections</button>
+        </div>
+    </body>
+    <script src="js/nnbCanvas.js" type="text/javascript"></script>
+    <script src="js/nnbSvg.js" type="text/javascript"></script>
+    <script src="js/nnb.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+</html>
